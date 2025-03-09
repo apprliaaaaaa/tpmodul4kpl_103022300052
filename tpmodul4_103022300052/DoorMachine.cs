@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace tpmodul4_103022300052
 {
     class DoorMachine
+
     {
+
     }
 }
