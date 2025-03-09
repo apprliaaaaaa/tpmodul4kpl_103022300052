@@ -4,9 +4,21 @@ class Program
 {
     static void Main()
     {
-       
-        Console.WriteLine("Kode Pos Batununggal: " + KodePos.GetKodePos("Batununggal"));
-        Console.WriteLine("Kode Pos Kujangsari: " + KodePos.GetKodePos("Kujangsari"));
+
+        Console.WriteLine("\n===== CEK KODE POS =====");
+        Console.Write("Masukkan nama kelurahan: ");
+        string kelurahan = Console.ReadLine(); 
+
+        int kodePos = KodePos.GetKodePos(kelurahan); 
+
+        if (kodePos != -1) 
+        {
+            Console.WriteLine($"Kode pos {kelurahan}: {kodePos}");
+        }
+        else 
+        {
+            Console.WriteLine($"Kelurahan {kelurahan} tidak ditemukan dalam database.");
+        }
 
         Console.WriteLine("===== SIMULASI DOOR MACHINE =====\n");
 
